@@ -1,0 +1,27 @@
+{% extends "./layout-default.html" %}
+
+{% set pageData = {
+  page_id: 'home',
+  template: 'index'
+} %}
+
+{% block content %}
+
+  <main class="o-main py-5">
+    <div class="container pt-md-4 pb-md-3">
+      <h1 class="display-4 mb-4">{{ title | safe }}</h1>
+      {% if description is defined and description | length > 0 %}
+        <div class="lead mb-3 mb-md-4 col-12 col-lg-7">{{ description | md | safe }}</div>
+      {% endif %}
+    </div>
+  </main>
+
+  {% if body %}
+    <div class="container pt-5">
+      <div class="c-article">
+        {{ body | safe }}
+      </div>
+    </div>
+  {% endif %}
+
+{% endblock %}
