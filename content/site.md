@@ -1,6 +1,6 @@
 ---
 type: settings
-copyright: Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>
+copyright: Copyright © 2025, Prumrent s.r.o.<br>Webdesign &amp; realizace <a href="https://www.babacek.cz" target="_blank" title="Pavel Babáček - grafik, tvorba webu, frontend designer a html kodér. Tvorba webu Brno." class="text-gray-600">Babacek.cz</a>
 baseUrl: https://example.com
 meta:
   lang: en
