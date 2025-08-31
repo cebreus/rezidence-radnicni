@@ -60,6 +60,8 @@ img:not([src$='.svg']) {
 // --------------
 
 .o-main {
+  background: url('../images/bg-main.svg') 0 100% repeat-x;
+
   ul {
     margin-bottom: $paragraph-margin-bottom;
   }
@@ -92,6 +94,10 @@ b, strong {
 .section {
   padding-top: map.get($spacers, 6);
   padding-bottom: map.get($spacers, 6);
+}
+
+.bg-sixrow {
+  background: url('../images/bg-sixrow.svg') 0 50% repeat-x;
 }
 
 // Zápatí webu
