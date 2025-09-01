@@ -100,6 +100,10 @@ b, strong {
   background: url('../images/bg-sixrow.svg') 0 50% repeat-x;
 }
 
+.btn {
+  border-radius: 0 $border-radius-pill $border-radius-pill 0;
+}
+
 // Zápatí webu
 // --------------
 
