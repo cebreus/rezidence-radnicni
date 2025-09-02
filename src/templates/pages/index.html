@@ -7,15 +7,22 @@
 
 {% block content %}
 
-  <main class="o-main py-5">
-    <div class="container">
+  <main class="o-main pt-6 mt-6 pb-5">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-7">
-          <h1 class="ms-n1">{{ title | safe }}</h1>
-          {% if description is defined and description | length > 0 %}
-            <p class="lead">{{ description | md | safe }}</p>
-          {% endif %}
-          <a class="btn btn-primary btn-lg" href="#">Nabídka bytů</a>
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <h1 class="ms-n1">{{ title | safe }}</h1>
+              {% if description is defined and description | length > 0 %}
+                <p class="lead">{{ description | md | safe }}</p>
+              {% endif %}
+              <a class="btn btn-primary btn-lg" href="#">Nabídka bytů</a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          foto
         </div>
       </div>
     </div>
@@ -146,21 +153,27 @@
         <h3 class="text-center mb-5">V pěší vzdálenosti najdete</h3>
         <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 text-center mb-5 mb-lg-6">
           <div class="col">
+            <img src="/assets/images/ico-dostupne-obchody-supermarket.svg" class="" alt="obchody a supermarket pro každodenní nákupy"><br><br>
             <strong class="text-primary">obchody a&nbsp;supermarket</strong> pro každodenní nákupy
           </div>
           <div class="col">
+            <img src="/assets/images/ico-dostupne-restaurace-kavarny.svg" class="" alt="restaurace, kavárny, pekárny a služby"><br><br>
             <strong class="text-primary">restaurace, kavárny, pekárny a&nbsp;služby</strong>
           </div>
           <div class="col">
+            <img src="/assets/images/ico-dostupne-lekare-lekarnu.svg" class="" alt="lékaře, lékárnu, poštu i banky"><br><br>
             <strong class="text-primary">lékaře, lékárnu, poštu i&nbsp;banky</strong>
           </div>
           <div class="col">
+            <img src="/assets/images/ico-dostupne-materske-zakladni-skoly.svg" class="" alt="mateřské, základní i střední školy"><br><br>
             <strong class="text-primary">mateřské, základní i&nbsp;střední školy</strong>
           </div>
           <div class="col">
+            <img src="/assets/images/ico-dostupne-kulturni-sportovni-vyziti.svg" class="" alt="kulturní a sportovní vyžití"><br><br>
             <strong class="text-primary">kulturní a&nbsp;sportovní vyžití</strong> – kino, knihovnu, městskou sportovní halu, bazén a&nbsp;fitness
           </div>
           <div class="col">
+            <img src="/assets/images/ico-dostupne-zastavky-mhd.svg" class="" alt="zastávky MHD i vlakové nádraží v dostupné vzdálenosti"><br><br>
             <strong class="text-primary">zastávky MHD</strong> i&nbsp;vlakové nádraží v&nbsp;dostupné vzdálenosti
           </div>
         </div>
@@ -185,36 +198,35 @@
             <p>Vysoký standard provedení, kvalitní materiály, důraz na&nbsp;akustiku a&nbsp;energetickou úsporu jsou pro nás samozřejmostí. <strong class="text-primary">K vybraným bytům náleží soukromé parkovací stání přímo u&nbsp;domu.</strong></p>
           </div>
         </div>
-        <div class="table-responsive fs-6 mb-5 mb-lg-6">
+        <div class="table-responsive fs-6">
           <table class="table table-hover text-nowrap">
             <thead>
               <tr class="lh-sm">
                 <th scope="col">Byt</th>
-                <th scope="col">Podlaží</th>
+                <th scope="col">Patro</th>
                 <th scope="col">Dispozice</th>
                 <th scope="col">Plocha</th>
-                <th scope="col">Balkon</th>
                 <th scope="col">Cena bytu</th>
-                <th scope="col">Cena park. stání<sup>*</sup></th>
-                <th scope="col">Status</th>
+                <th scope="col">Cena park. stání<sup></sup></th>
+                <th scope="col">Stav</th>
                 <th scope="col">Karta bytu</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>ddd</strong></td>
-                <td>ddd</td>
-                <td>ddd</td>
-                <td>dd m&sup2;</td>
-                <td>dd</td>
-                <td><strong class="text-secondary text-nowrap">ggg  Kč</strong></td>
-                <td><strong class="text-nowrap">fff  Kč</strong></td>
-                <td>fff</td>
-                <td><a href="{{ apartment.url }}" target="_blank">Stáhnout PDF</a></td>
+                <td><strong><a href="" target="_blank">1</a></strong></td>
+                <td>1. NP</td>
+                <td>1+kk</td>
+                <td>62,70 m&sup2;</td>
+                <td><strong class="text-primary text-nowrap">3 360 000  Kč</strong></td>
+                <td><strong class="text-nowrap">300 000  Kč</strong></td>
+                <td>K dispozici</td>
+                <td><a href="" target="_blank">Stáhnout PDF</a></td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="small text-end mb-5 mb-lg-6">Všechny ceny jsou uvedeny včetně DPH.</p>
         <div class="cta-main rounded-pill rounded-start overflow-hidden mb-5 mb-lg-6 shadow-lg">
           <div class="row align-items-center text-secondary">
             <div class="col-xl bg-primary p-4 p-xl-5 my-xl-n2">

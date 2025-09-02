@@ -12,7 +12,7 @@
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body data-version="0.0.0" data-template="{{ pageData.template }}" data-bs-theme="light">
+  <body data-version="0.0.0" data-template="{{ pageData.template }}" data-bs-theme="light" data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
 
     {% if pageData.page_id === '404' %}
       {% block content404 %}{% endblock %}

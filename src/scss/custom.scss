@@ -39,21 +39,58 @@ img:not([src$='.svg']) {
 // --------------
 
 .o-header {
+  padding-left: map.get($spacers, 2);
+  font-weight: $font-weight-bold;
   color: var(--bs-dark-text-emphasis);
+  @include transition();
 
-  &[data-bs-theme='dark'] {
-    background-color: #0a1d39;
+  @include media-breakpoint-up(md) {
+    padding-left: map.get($spacers, 3);
   }
 
-  .navbar {
-    --bs-navbar-brand-color: var(--bs-orange);
-    --bs-navbar-brand-hover-color: var(--bs-link-hover-color);
+  @include media-breakpoint-up(xl) {
+    padding-left: map.get($spacers, 4);
+  }
+
+  &.scroll {
+    background: var(--bs-secondary);
+    box-shadow: $box-shadow-lg;
+  }
+
+  &:not(.scroll) {
+    padding-top: map.get($spacers, 2);
+    padding-bottom: map.get($spacers, 2);
   }
 }
 
+.navbar-brand img {
+  height: 80px;
+  @include transition();
+
+  @include media-breakpoint-down(xl) {
+    height: 64px;
+  }
+}
+
+.scroll .navbar-brand img {
+  height: 64px;
+}
+
 .navbar-nav {
-  --bs-nav-link-color: var(--bs-orange);
-  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  font-family: $headings-font-family;
+
+  @include media-breakpoint-only(xxl) {
+    --bs-navbar-nav-link-padding-x: 2rem;
+    font-size: $font-size-base * 1.125;
+  }
+
+  @include media-breakpoint-only(xl) {
+    --bs-navbar-nav-link-padding-x: 1.25rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base;
+  }
 }
 
 // Hlavní obsah
