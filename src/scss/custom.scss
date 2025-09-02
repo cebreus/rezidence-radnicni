@@ -100,8 +100,18 @@ b, strong {
   background: url('../images/bg-sixrow.svg') 0 50% repeat-x;
 }
 
+.bg-tworow {
+  background-image: url('../images/bg-tworow.svg');
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+}
+
 .btn {
   border-radius: 0 $border-radius-pill $border-radius-pill 0;
+}
+
+.cta-main {
+  background: url('../images/bg-tworow.svg') 0 100% var(--bs-primary);
 }
 
 // Zápatí webu

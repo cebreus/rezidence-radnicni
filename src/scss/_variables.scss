@@ -705,9 +705,9 @@ $hr-bg-color:                 null !default; // Deprecated in v5.2.0
 $hr-height:                   null !default; // Deprecated in v5.2.0
 // fusv-enable
 
-$hr-border-color:             null !default; // Allows for inherited colors
+$hr-border-color:             $border-color !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  1 !default;
 
 // scss-docs-start vr-variables
 $vr-border-width:             var(--#{$prefix}border-width) !default;
@@ -791,7 +791,7 @@ $table-variants: (
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-y:         .75rem !default;
-$input-btn-padding-x:         1.5rem !default;
+$input-btn-padding-x:         1.6125rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
