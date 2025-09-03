@@ -8,7 +8,7 @@
 {% block content %}
 
   <main class="o-main pt-6 mt-6 pb-5">
-    <div class="container-fluid">
+    <div class="container-fluid pt-xl-6" id="uvod">
       <div class="row">
         <div class="col-7">
           <div class="row justify-content-center">
@@ -22,7 +22,19 @@
           </div>
         </div>
         <div class="col">
-          foto
+          <div id="carouselIntro" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-4">
+              <div class="carousel-item active">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt1-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt1-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt6-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -56,12 +68,12 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="projekt">
       <div class="container">
         <div class="row mb-5 mb-lg-6">
           <div class="col-lg">
             <h2 class="mb-lg-5"><span class="suptitle ps-1">Představení projektu</span> Spojení historie s&nbsp;moderním bydlením</h2>
-            <p>Residence Radniční je&nbsp;jedinečný bytový projekt situovaný přímo v&nbsp;centru města Šumperka – na&nbsp;adrese <strong class="text-primary">Radniční&nbsp;4</strong>. V&nbsp;rámci citlivé rekonstrukce vznikne <strong class="text-primary">17&nbsp;bytových jednotek</strong>, které nabídnou svým obyvatelům nejen komfortní a&nbsp;úsporné bydlení, ale i&nbsp;atmosféru lokality s&nbsp;duší a&nbsp;tradicí. Projekt&nbsp;klade důraz na <strong class="text-primary">kvalitní provedení, dlouhodobou udržitelnost a&nbsp;logické dispozice</strong>, které odpovídají potřebám moderního života.</p>
+            <p>Rezidence Radniční je&nbsp;jedinečný bytový projekt situovaný přímo v&nbsp;centru města Šumperka – na&nbsp;adrese <strong class="text-primary">Radniční&nbsp;4</strong>. V&nbsp;rámci citlivé rekonstrukce vznikne <strong class="text-primary">17&nbsp;bytových jednotek</strong>, které nabídnou svým obyvatelům nejen komfortní a&nbsp;úsporné bydlení, ale i&nbsp;atmosféru lokality s&nbsp;duší a&nbsp;tradicí. Projekt&nbsp;klade důraz na <strong class="text-primary">kvalitní provedení, dlouhodobou udržitelnost a&nbsp;logické dispozice</strong>, které odpovídají potřebám moderního života.</p>
             <p>Každý byt je&nbsp;navržen s&nbsp;maximální pečlivostí – s&nbsp;důrazem na dostatek denního světla, promyšlené úložné prostory a&nbsp;kvalitní materiály. Rekonstrukce přinese také moderní technické vybavení:</p>
             <ul class="text-primary">
               <li><strong>samostatné vytápění každého bytu</strong></li>
@@ -79,9 +91,9 @@
         <div class="row mb-5 mb-lg-6">
           <div class="col-lg">
             <h2 class="mb-lg-5">Citlivá rekonstrukce, silné zázemí</h2>
-            <p>Na projektu spolupracují dvě stabilní společnosti ze skupiny <strong class="text-primary">Prumrent Real Group</strong> – developer <strong class="text-primary">Prumrent</strong> a stavební partner <strong class="text-primary">Fortis Morava</strong>, který zajišťuje samotnou realizaci.</p>
+            <p>Na projektu spolupracují dvě stabilní společnosti ze skupiny <strong class="text-primary">PRUMRENT REAL GROUP</strong> – developer <strong class="text-primary">PRUMRENT</strong> a stavební partner <strong class="text-primary">Fortis Morava</strong>, který zajišťuje samotnou realizaci.</p>
             <p class="mb-5">Díky jejich zkušenostem a detailnímu přístupu je zaručeno, že projekt bude dokončen kvalitně, bezpečně a s respektem k okolní zástavbě i původní architektuře.</p>
-            <p class="mb-3"><a class="btn btn-primary me-4 me-xl-5" href="#">více o developerovi</a><img src="/assets/images/logo-prumrent-rg.svg" class="" alt="Prumrent Real Group"></p>
+            <p class="mb-3"><a class="btn btn-primary me-4 me-xl-5" href="#">více o developerovi</a><img src="/assets/images/logo-prumrent-rg.svg" class="" alt="PRUMRENT REAL GROUP"></p>
             <p><a class="btn btn-primary me-4 me-xl-5" href="#">více o realizátorovi</a><img src="/assets/images/logo-fortis-morava.svg" class="" alt="Fortis Morava"></p>
           </div>
           <div class="col-lg">
@@ -90,7 +102,7 @@
         </div>
         <div class="row mb-5 mb-lg-6">
           <div class="col-lg text-center text-lg-start">
-            <h2 class="mb-sm-5">Pro koho je<br>Residence Radniční?</h2>
+            <h2 class="mb-sm-5">Pro koho je<br>Rezidence Radniční?</h2>
             <div class="row">
               <div class="col-sm col-lg-12">
                 <div class="row align-items-center gy-4 mb-5">
@@ -130,7 +142,7 @@
         </div>
       </div>
     </section>
-    <section class="section overflow-hidden py-0">
+    <section class="section overflow-hidden py-0" id="lokalita">
       <div class="container">
         <div class="row mb-6 g-4 g-md-5 g-xxl-6">
           <div class="col-lg">
@@ -186,7 +198,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="nabidka-bytu">
       <div class="container">
         <div class="row mb-5 mb-lg-6">
           <div class="col-lg">
@@ -242,23 +254,32 @@
     <section class="section bg-sixrow py-0 mb-5 mb-lg-6">
       <div class="container">
         <div class="text-center">
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
+          <div id="carouselMain" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-4">
               <div class="carousel-item active">
-                <img src="/assets/images/gallery/rezidence-radnicni-01.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt1-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
               </div>
               <div class="carousel-item">
-                <img src="/assets/images/gallery/rezidence-radnicni-02.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt1-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
               </div>
               <div class="carousel-item">
-                <img src="/assets/images/gallery/rezidence-radnicni-01.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt6-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt6-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt14-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 14">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/gallery/rezidence-radnicni-byt14-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 14">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -266,7 +287,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="financovani">
       <div class="container overflow-hidden">
         <div class="row justify-content-center mb-5 mb-lg-6 gx-5 gx-xxl-6">
           <div class="col-lg-5">
@@ -303,11 +324,11 @@
         <hr class="border-2 my-4 my-lg-5">
       </div>      
     </section>
-    <section class="section overflow-hidden">
+    <section class="section overflow-hidden" id="developer">
       <div class="container pb-5">
         <div class="row mb-5 gx-5">
           <div class="col-lg">
-            <h2><span class="suptitle ps-1">Developer</span> Prumrent <span class="d-block">Real Group</span></h2>
+            <h2><span class="suptitle ps-1">Developer</span> PRUMRENT <span class="d-block">REAL GROUP</span></h2>
           </div>
           <div class="col-md pt-lg-5">
             <p>Jsme stabilní developerská skupina působící převážně v&nbsp;regionu Šumperka a&nbsp;okolí. Specializujeme se na komplexní development rezidenčních, komerčních i&nbsp;multifunkčních projektů, které přinášejí kvalitní a&nbsp;dlouhodobě udržitelné řešení bydlení a&nbsp;podnikání.</p>
@@ -354,7 +375,7 @@
               <li class="list-group-item">Udržitelnost a ohled na životní	prostředí</li>
               <li class="list-group-item">Spolupráce s místní komunitou a	podpora regionu</li>
             </ul>
-            <img src="/assets/images/logo-prumrent-rg-big.svg" class="mb-4"alt="Prumrent Real Group"><br>
+            <img src="/assets/images/logo-prumrent-rg-big.svg" class="mb-4"alt="PRUMRENT REAL GROUP"><br>
             <a class="btn btn-primary bg-white border-white" href="#">více o developerovi</a>
           </div>          
         </div>

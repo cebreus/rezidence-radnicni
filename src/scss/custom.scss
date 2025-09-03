@@ -40,7 +40,6 @@ img:not([src$='.svg']) {
 
 .o-header {
   padding-left: map.get($spacers, 2);
-  font-weight: $font-weight-bold;
   color: var(--bs-dark-text-emphasis);
   @include transition();
 
@@ -49,7 +48,8 @@ img:not([src$='.svg']) {
   }
 
   @include media-breakpoint-up(xl) {
-    padding-left: map.get($spacers, 4);
+    padding-left: map.get($spacers, 5);
+    padding-right: map.get($spacers, 4);
   }
 
   &.scroll {
@@ -60,36 +60,46 @@ img:not([src$='.svg']) {
   &:not(.scroll) {
     padding-top: map.get($spacers, 2);
     padding-bottom: map.get($spacers, 2);
+
+    @include media-breakpoint-up(xl) {
+      padding-top: map.get($spacers, 4);
+      padding-bottom: map.get($spacers, 4);
+    }
   }
 }
 
 .navbar-brand img {
-  height: 80px;
+  height: 76px;
   @include transition();
 
   @include media-breakpoint-down(xl) {
-    height: 64px;
+    height: 60px;
   }
 }
 
 .scroll .navbar-brand img {
-  height: 64px;
+  height: 54px;
 }
 
 .navbar-nav {
   font-family: $headings-font-family;
 
+  @include media-breakpoint-up(xl) {
+    --bs-navbar-nav-link-padding-x: 1.25rem;
+    font-size: $font-size-base * 1.25;
+  }
+
   @include media-breakpoint-only(xxl) {
-    --bs-navbar-nav-link-padding-x: 2rem;
+    --bs-navbar-nav-link-padding-x: 1.5rem;
+  }
+
+  @include media-breakpoint-only(lg) {
+    --bs-navbar-nav-link-padding-x: 1rem;
     font-size: $font-size-base * 1.125;
   }
 
-  @include media-breakpoint-only(xl) {
-    --bs-navbar-nav-link-padding-x: 1.25rem;
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: $font-size-base;
+  @include media-breakpoint-down(lg) {
+    font-size: $font-size-base * 1.125;
   }
 }
 
