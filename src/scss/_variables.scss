@@ -1651,24 +1651,24 @@ $breadcrumb-border-radius:          null !default;
 // Carousel
 
 // scss-docs-start carousel-variables
-$carousel-control-color:             $white !default;
-$carousel-control-width:             15% !default;
-$carousel-control-opacity:           .5 !default;
-$carousel-control-hover-opacity:     .9 !default;
+$carousel-control-color:             $secondary !default;
+$carousel-control-width:             60px !default;
+$carousel-control-opacity:           1 !default;
+$carousel-control-hover-opacity:     .85 !default;
 $carousel-control-transition:        opacity .15s ease !default;
 
-$carousel-indicator-width:           30px !default;
-$carousel-indicator-height:          3px !default;
-$carousel-indicator-hit-area-height: 10px !default;
-$carousel-indicator-spacer:          3px !default;
-$carousel-indicator-opacity:         .5 !default;
-$carousel-indicator-active-bg:       $white !default;
+$carousel-indicator-width:           12px !default;
+$carousel-indicator-height:          12px !default;
+$carousel-indicator-hit-area-height: 0 !default;
+$carousel-indicator-spacer:          5px !default;
+$carousel-indicator-opacity:         1 !default;
+$carousel-indicator-active-bg:       $primary !default;
 $carousel-indicator-active-opacity:  1 !default;
 $carousel-indicator-transition:      opacity .6s ease !default;
 
 $carousel-caption-width:             70% !default;
 $carousel-caption-color:             $white !default;
-$carousel-caption-padding-y:         1.25rem !default;
+$carousel-caption-padding-y:         .5rem !default;
 $carousel-caption-spacer:            1.25rem !default;
 
 $carousel-control-icon-width:        2rem !default;

@@ -118,6 +118,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: calc(2.25rem + 2.65vw);
+}
+
 b, strong {
   font-weight: $font-weight-bold;
 }
@@ -130,6 +134,12 @@ b, strong {
   color: var(--bs-secondary);
 }
 
+.lead {
+  @include media-breakpoint-down(xl) {
+    font-size: $font-size-base * 1.125;
+  }
+}
+
 .suptitle {
   display: block;
   margin-bottom: map.get($spacers, 4);
@@ -139,12 +149,19 @@ b, strong {
 }
 
 .section {
-  padding-top: map.get($spacers, 6);
-  padding-bottom: map.get($spacers, 6);
+  padding-top: map.get($spacers, 6) * 1.25;
+  padding-bottom: map.get($spacers, 6) * .75;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: map.get($spacers, 6) * 1.125;
+    padding-bottom: map.get($spacers, 4);
+  }
 }
 
 .bg-sixrow {
-  background: url('../images/bg-sixrow.svg') 0 50% repeat-x;
+  @include media-breakpoint-up(sm) {
+    background: url('../images/bg-sixrow.svg') 0 50% repeat-x;
+  }
 }
 
 .bg-tworow {
@@ -161,11 +178,52 @@ b, strong {
   background: url('../images/bg-tworow.svg') 0 100% var(--bs-primary);
 }
 
+.carousel-indicators [data-bs-target] {
+  border-radius: $border-radius-pill;
+
+  &:not(.active) {
+    background: var(--bs-white);
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  height: 60px;
+  background: var(--bs-white);
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 0 $border-radius-pill $border-radius-pill 0;
+}
+
+.carousel-control-next {
+  border-radius: $border-radius-pill 0 0 $border-radius-pill;
+}
+
+.img-rounded {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius-pill $border-radius-pill 0 0;
+
+  &::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 0;
+    content: '';
+    @include gradient-y(rgba(map.get($theme-colors, 'secondary'), 0), rgba(map.get($theme-colors, 'secondary'), 1), 0%, 100%);
+  }
+}
+
 // Zápatí webu
 // --------------
 
 .o-footer {
-  padding-top: map.get($spacers, 5) * 1.25;
+  padding-top: map.get($spacers, 6) * 1.25;
   background: var(--bs-gray-800);
 }
 

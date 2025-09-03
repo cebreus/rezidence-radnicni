@@ -7,31 +7,37 @@
 
 {% block content %}
 
-  <main class="o-main pt-6 mt-6 pb-5">
-    <div class="container-fluid pt-xl-6" id="uvod">
-      <div class="row">
-        <div class="col-7">
+  <main class="o-main pt-5 pt-md-6 mt-6 pb-5">
+    <div class="container-fluid" id="uvod">
+      <div class="row align-items-center justify-content-center gy-5">
+        <div class="col-md">
           <div class="row justify-content-center">
-            <div class="col-9">
+            <div class="col-11 col-xl-10 col-xxl-9">
               <h1 class="ms-n1">{{ title | safe }}</h1>
               {% if description is defined and description | length > 0 %}
-                <p class="lead">{{ description | md | safe }}</p>
+                <p class="lead py-lg-3">{{ description | md | safe }}</p>
               {% endif %}
-              <a class="btn btn-primary btn-lg" href="#">Nabídka bytů</a>
+              <a class="btn btn-primary btn-lg" href="#nabidka-bytu">Nabídka bytů</a>
               </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-11 col-sm-9 col-md pe-lg-4 pe-xl-5 pe-xxl-6">
           <div id="carouselIntro" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner rounded-4">
+            <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/assets/images/gallery/rezidence-radnicni-byt1-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+                <div class="img-rounded">
+                  <img src="/assets/images/rezidence-radnicni-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+                </div>
               </div>
               <div class="carousel-item">
-                <img src="/assets/images/gallery/rezidence-radnicni-byt1-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+                <div class="img-rounded">
+                  <img src="/assets/images/rezidence-radnicni-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+                </div>
               </div>
               <div class="carousel-item">
-                <img src="/assets/images/gallery/rezidence-radnicni-byt6-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+                <div class="img-rounded">
+                  <img src="/assets/images/rezidence-radnicni-03.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+                </div>
               </div>
             </div>
           </div>
@@ -40,7 +46,7 @@
     </div>
     <section class="section">
       <div class="container">
-        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 text-center gy-4 gy-sm-5">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-xl-6 text-center gy-4 gy-sm-5">
           <div class="col">
             <img src="/assets/images/ico-benefit-soukrome-parkovani.svg" class="" alt="soukromé parkování před domem"><br><br>
             <strong>soukromé parkování před domem</strong>
@@ -70,7 +76,7 @@
     </section>
     <section class="section" id="projekt">
       <div class="container">
-        <div class="row mb-5 mb-lg-6">
+        <div class="row justify-content-center mb-5 mb-lg-6 g-4 g-md-5">
           <div class="col-lg">
             <h2 class="mb-lg-5"><span class="suptitle ps-1">Představení projektu</span> Spojení historie s&nbsp;moderním bydlením</h2>
             <p>Rezidence Radniční je&nbsp;jedinečný bytový projekt situovaný přímo v&nbsp;centru města Šumperka – na&nbsp;adrese <strong class="text-primary">Radniční&nbsp;4</strong>. V&nbsp;rámci citlivé rekonstrukce vznikne <strong class="text-primary">17&nbsp;bytových jednotek</strong>, které nabídnou svým obyvatelům nejen komfortní a&nbsp;úsporné bydlení, ale i&nbsp;atmosféru lokality s&nbsp;duší a&nbsp;tradicí. Projekt&nbsp;klade důraz na <strong class="text-primary">kvalitní provedení, dlouhodobou udržitelnost a&nbsp;logické dispozice</strong>, které odpovídají potřebám moderního života.</p>
@@ -84,24 +90,28 @@
             </ul>
             <p>K většině bytů náleží soukromé parkovací místo přímo u domu, což&nbsp;výrazně zvyšuje pohodlí každodenního života v centru města.</p>
           </div>
-          <div class="col-lg order-lg-first">
-            <strong>soukromé parkování před domem</strong>
+          <div class="col-11 col-sm-10 col-lg-6 order-lg-first">
+            <div class="img-rounded">
+              <img src="/assets/images/rezidence-radnicni-04.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+            </div>
           </div>
         </div>
-        <div class="row mb-5 mb-lg-6">
+        <div class="row justify-content-center align-items-center mb-5 mb-lg-6 g-4 g-md-5">
           <div class="col-lg">
             <h2 class="mb-lg-5">Citlivá rekonstrukce, silné zázemí</h2>
             <p>Na projektu spolupracují dvě stabilní společnosti ze skupiny <strong class="text-primary">PRUMRENT REAL GROUP</strong> – developer <strong class="text-primary">PRUMRENT</strong> a stavební partner <strong class="text-primary">Fortis Morava</strong>, který zajišťuje samotnou realizaci.</p>
-            <p class="mb-5">Díky jejich zkušenostem a detailnímu přístupu je zaručeno, že projekt bude dokončen kvalitně, bezpečně a s respektem k okolní zástavbě i původní architektuře.</p>
-            <p class="mb-3"><a class="btn btn-primary me-4 me-xl-5" href="#">více o developerovi</a><img src="/assets/images/logo-prumrent-rg.svg" class="" alt="PRUMRENT REAL GROUP"></p>
-            <p><a class="btn btn-primary me-4 me-xl-5" href="#">více o realizátorovi</a><img src="/assets/images/logo-fortis-morava.svg" class="" alt="Fortis Morava"></p>
+            <p class="mb-5">Díky jejich zkušenostem a detailnímu přístupu je zaručeno, že projekt bude dokončen kvalitně, bezpečně a&nbsp;s&nbsp;respektem k&nbsp;okolní zástavbě i&nbsp;původní architektuře.</p>
+            <p class="mb-2"><a class="btn btn-primary me-4 me-xl-5 mb-3" href="https://prumrent.cz/" target="_blank">více o developerovi</a><img src="/assets/images/logo-prumrent-rg.svg" class="mb-3" alt="PRUMRENT REAL GROUP"></p>
+            <p><a class="btn btn-primary me-4 me-xl-5 mb-3" href="https://fortismorava.cz/" target="_blank">více o realizátorovi</a><img src="/assets/images/logo-fortis-morava.svg" class="mb-3" alt="Fortis Morava"></p>
           </div>
-          <div class="col-lg">
-            <strong>soukromé parkování před domem</strong>
+          <div class="col-11 col-sm-10 col-lg-6">
+            <div class="img-rounded">
+              <img src="/assets/images/rezidence-radnicni-05.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+            </div>
           </div>
         </div>
-        <div class="row mb-5 mb-lg-6">
-          <div class="col-lg text-center text-lg-start">
+        <div class="row justify-content-center align-items-center justify-content-lg-between g-md-5">
+          <div class="col-lg-5 text-center text-lg-start">
             <h2 class="mb-sm-5">Pro koho je<br>Rezidence Radniční?</h2>
             <div class="row">
               <div class="col-sm col-lg-12">
@@ -109,7 +119,7 @@
                   <div class="col-lg-auto me-sm-4">
                     <img src="/assets/images/ico-cilovka-pary-jednotlivci.svg" class="" alt="Pro páry i jednotlivce">
                   </div>
-                  <div class="col-lg-6 col-lg-8 col-xl-6 col-xxl-5">
+                  <div class="col-lg col-xl-6 col-xxl-5">
                     <p class="mb-0"><strong class="text-primary">Pro páry i jednotlivce</strong>, kteří chtějí mít městský život na&nbsp;dosah ruky.</p>
                   </div>
                 </div>
@@ -119,7 +129,7 @@
                   <div class="col-lg-auto me-sm-4">
                     <img src="/assets/images/ico-cilovka-rodiny.svg" class="" alt="Pro rodiny">
                   </div>
-                  <div class="col-lg-7 col-xxl-6">
+                  <div class="col-lg col-xxl-7">
                     <p class="mb-0"><strong class="text-primary">Pro rodiny</strong>, které hledají pohodlné zázemí s&nbsp;kompletní občanskou vybaveností v&nbsp;pěší	vzdálenosti.</p>
                   </div>
                 </div>
@@ -129,20 +139,22 @@
                   <div class="col-lg-auto me-sm-4">
                     <img src="/assets/images/ico-cilovka-investori.svg" class="" alt="Pro investory">
                   </div>
-                  <div class="col-lg col-xxl-7">
+                  <div class="col-lg col-xxl-9">
                     <p class="mb-0"><strong class="text-primary">Pro investory</strong>, kteří chtějí zhodnotit své prostředky v&nbsp;atraktivní lokalitě s&nbsp;vysokou poptávkou po&nbsp;nájemním bydlení.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg order-lg-first">
-            <strong>soukromé parkování před domem</strong>
+          <div class="col-11 col-sm-10 col-lg-6 order-lg-first">
+            <div class="img-rounded">
+              <img src="/assets/images/rezidence-radnicni-06.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section overflow-hidden py-0" id="lokalita">
+    <section class="section overflow-hidden pb-0" id="lokalita">
       <div class="container">
         <div class="row mb-6 g-4 g-md-5 g-xxl-6">
           <div class="col-lg">
@@ -192,7 +204,7 @@
       </div>
     </section>
     <section class="section bg-sixrow py-0 mb-5 mb-lg-6">
-      <div class="container">
+      <div class="container-md">
         <div class="ratio ratio-21x9 shadow-lg rounded-4 overflow-hidden">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.4690123376918!2d16.969287877319434!3d49.965062371503535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47121a5426a5ba5d%3A0x7aee34afad10ab0d!2zUmFkbmnEjW7DrSAyMzEvNCwgNzg3IDAxIMWgdW1wZXJrIDE!5e0!3m2!1scs!2scz!4v1756474641524!5m2!1scs!2scz"></iframe>
         </div>
@@ -252,28 +264,54 @@
       </div>
     </section>
     <section class="section bg-sixrow py-0 mb-5 mb-lg-6">
-      <div class="container">
+      <div class="container-md">
         <div class="text-center">
           <div id="carouselMain" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner rounded-4">
               <div class="carousel-item active">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt1-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 1 – Rezidence Radniční, Šumperk 
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt1-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 1">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 1 – Rezidence Radniční, Šumperk
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt6-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 6 – Rezidence Radniční, Šumperk
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt6-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 6">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 6 – Rezidence Radniční, Šumperk
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt14-01.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 14">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 14 – Rezidence Radniční, Šumperk
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/images/gallery/rezidence-radnicni-byt14-02.png" class="d-block w-100" alt="Rezidence Radniční Šumperk - Byt 14">
+                <div class="carousel-caption small d-none d-sm-block">
+                  Byt 14 – Rezidence Radniční, Šumperk
+                </div>
               </div>
+            </div>
+            <div class="carousel-indicators position-static mt-3">
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -289,14 +327,16 @@
     </section>
     <section class="section" id="financovani">
       <div class="container overflow-hidden">
-        <div class="row justify-content-center mb-5 mb-lg-6 gx-5 gx-xxl-6">
-          <div class="col-lg-5">
+        <div class="row justify-content-center align-items-center mb-5 mb-lg-6 g-5 gx-xxl-6">
+          <div class="col-lg-5 order-lg-first">
             <h2 class="mb-lg-5"><span class="suptitle ps-1">Financování</span> Přizpůsobíme se vašim možnostem</h2>
             <p class="lead pe-xxl-5">Víme, že každý má jiné preference a&nbsp;finanční možnosti. Proto nabízíme tři transparentní a&nbsp;férové způsoby financování:</p>
-          </div>
-          <div class="col-lg-5">
-            <strong>soukromé parkování před domem</strong>
-          </div>
+          </div>  
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="img-rounded">
+              <img src="/assets/images/rezidence-radnicni-07.png" class="d-block w-100" alt="Rezidence Radniční Šumperk">
+            </div>
+          </div>                  
         </div>
         <div class="row g-5">
           <div class="col-md">
@@ -337,7 +377,7 @@
             <p>Naše projekty stavíme s&nbsp;důrazem na vysokou kvalitu zpracování, citlivý přístup k&nbsp;lokalitě a&nbsp;potřeby budoucích obyvatel i&nbsp;uživatelů. Snažíme se vytvářet místa, která mají duši a&nbsp;zároveň splňují nároky moderního života.</p>
           </div>
         </div>
-        <div class="row align-items-center mb-5 mb-lg-6 g-5">
+        <div class="row align-items-center mb-6 pb-4 pb-md-5 pb-lg-0 g-5">
           <div class="col-lg">
             <div class="card bg-primary text-secondary rounded-5 border-0 shadow-lg p-2 p-lg-0">
               <div class="card-body p-lg-5">
@@ -376,7 +416,7 @@
               <li class="list-group-item">Spolupráce s místní komunitou a	podpora regionu</li>
             </ul>
             <img src="/assets/images/logo-prumrent-rg-big.svg" class="mb-4"alt="PRUMRENT REAL GROUP"><br>
-            <a class="btn btn-primary bg-white border-white" href="#">více o developerovi</a>
+            <a class="btn btn-primary bg-white border-white" href="https://prumrent.cz/" target="_blank">více o developerovi</a>
           </div>          
         </div>
       </div>
