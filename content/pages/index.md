@@ -1,7 +1,7 @@
 ---
 type: page
-title: <span class="suptitle ps-1">Rezidence Radniční</span> Bydlení s&nbsp;duší, v&nbsp;srdci Šumperka
-description: Na adrese <strong class="text-primary">Radniční&nbsp;4 v&nbsp;Šumperku</strong> vzniká unikátní projekt rezidenčního bydlení, který&nbsp;spojuje historickou hodnotu budovy s&nbsp;moderním komfortem dnešní doby. Celkem <strong class="text-primary">17&nbsp;bytových jednotek</strong> nabídne klidné, přesto dokonale dostupné městské bydlení. Ke&nbsp;každému bytu náleží také <strong class="text-primary">soukromé parkovací místo přímo před budovou</strong>. V&nbsp;rámci rekonstrukce je&nbsp;navíc budova vybavena <strong class="text-primary">novým moderním výtahem</strong>, který zajišťuje pohodlný přístup do všech pater.
+title: <span class="suptitle ps-sm-1">Rezidence Radniční</span> Bydlení s&nbsp;duší, v&nbsp;srdci Šumperka
+description: Na adrese <strong class="text-primary">Radniční&nbsp;4 v&nbsp;Šumperku</strong> vzniká unikátní projekt rezidenčního bydlení, který&nbsp;spojuje historickou hodnotu budovy s&nbsp;moderním komfortem dnešní doby. Celkem <strong class="text-primary">17&nbsp;bytových jednotek</strong> nabídne klidné, přesto dokonale dostupné městské bydlení. Ke&nbsp;každému bytu náleží také <strong class="text-primary">soukromé parkovací místo přímo před budovou</strong>. V&nbsp;rámci rekonstrukce je&nbsp;navíc budova vybavena <strong class="text-primary">novým moderním výtahem</strong>, který zajišťuje pohodlný přístup do&nbsp;všech pater.
 entity_status:
   date: 2020-02-01T11:00
   updated_at: 2021-11-21T12:00:00
