@@ -1,6 +1,11 @@
 /* TEAM */
 
-	Frontend developer: Jaroslav Vrána
+	Frontend developer, webdesigner: Pavel Babáček
+	Site: https://www.babacek.cz/
+	Instagram: https://www.instagram.com/babacek.cz/
+	From: Brno, Czech Republic
+
+	Devstack creator: Jaroslav Vrána
 	Site: https://www.cebre.us/
 	Twitter: @cebreus69
 	From: Brno, Czech Republic
@@ -8,7 +13,7 @@
 
 /* SITE */
 
-	Last update: 2021/21/11
+	Last update: 2025/08/04
 	Language: English
 	Doctype: HTML5
 	Standards: HTML5, CSS3, BEM

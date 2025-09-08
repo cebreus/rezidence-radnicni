@@ -17,7 +17,7 @@ open_graph:
   title: ''
   description: ''
 twitter_cards:
-  use: true
+  use: false
   title: ''
   description: ''
 ---
