@@ -20,7 +20,7 @@ open_graph:
   title: Bydlení s duší, v srdci Šumperka | Rezidence Radniční
   description: Na adrese Radniční 4 v Šumperku vzniká unikátní projekt rezidenčního bydlení, který spojuje historickou hodnotu budovy s moderním komfortem dnešní doby. Celkem 17 bytových jednotek nabídne klidné, přesto dokonale dostupné městské bydlení.
   image:
-    - assets/images/rezidence-radnicni-open-graph.jpg
+    - assets/images/rezidence-radnicni-open-graph.png
   image_width: 1200px
   image_height: 630px
   image_text: Na adrese Radniční 4 v Šumperku vzniká unikátní projekt rezidenčního bydlení, který spojuje historickou hodnotu budovy s moderním komfortem dnešní doby.
