@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - core-js-pure
+  - es5-ext
+  - fsevents
+  - gifsicle
+  - mozjpeg
+  - optipng-bin
+  - sharp
