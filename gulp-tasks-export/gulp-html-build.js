@@ -134,6 +134,16 @@ const buildHtml = (params) => {
         )
       )
       .pipe(
+        data(() => {
+          const jsonData = JSON.parse(fs.readFileSync('./content/data.json'));
+          jsonData.news.sort((a, b) => new Date(b.date) - new Date(a.date));
+          jsonData.apartments.sort(
+            (a, b) => a.apartment_number - b.apartment_number
+          );
+          return { news: jsonData.news, apartments: jsonData.apartments };
+        })
+      )
+      .pipe(
         nunjucksRender({
           path: params.processPaths,
           manageEnv: (enviroment) => {

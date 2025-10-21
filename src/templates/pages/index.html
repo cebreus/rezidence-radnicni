@@ -280,32 +280,57 @@ template: 'index'
         <table class="table table-hover text-nowrap">
           <thead>
             <tr class="lh-sm">
-              <th scope="col">Byt</th>
+                <th scope="col">Byt</th>
               <th scope="col">Patro</th>
-              <th scope="col">Dispozice</th>
-              <th scope="col">Plocha</th>
-              <th scope="col">Cena bytu</th>
-              <th scope="col">Cena park. stání<sup></sup></th>
-              <th scope="col">Stav</th>
-              <th scope="col">Karta bytu</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong><a href="" target="_blank">1</a></strong></td>
-              <td>1. NP</td>
-              <td>1+kk</td>
-              <td>62,70 m&sup2;</td>
-              <td><strong class="text-primary text-nowrap">3 360 000 Kč</strong></td>
-              <td><strong class="text-nowrap">300 000 Kč</strong></td>
-              <td>K dispozici</td>
-              <td><a href="" target="_blank">Stáhnout PDF</a></td>
-            </tr>
+                <th scope="col">Dispozice</th>
+                <th scope="col">Plocha</th>
+                <th scope="col">Cena bytu</th>
+                <th scope="col">Cena park. stání<sup class="fw-light">*</sup>
+                </th>
+                <th scope="col">Stav</th>
+                <th scope="col">Karta bytu</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for apartment in apartments %}
+                <tr>
+                  <td>
+                    <strong>
+                      {% if apartment.url %}
+                        <a href="{{ apartment.url }}" target="_blank">{{ apartment.apartment_number }}</a>
+                      {% else %}
+                        {{ apartment.apartment_number }}
+                      {% endif %}
+                    </strong>
+                  </td>
+                  <td>{{ apartment.floor }}</td>
+                  <td>{{ apartment.layout }}</td>
+                  <td>{{ apartment.area_m2 }}
+                    m&sup2;</td>
+                  <!-- <td>{{ apartment.balcony }}</td> -->
+                  <td>
+                    <strong class="text-secondary text-nowrap">{{ apartment.price_apartment }}
+                      Kč</strong>
+                  </td>
+                  <td>
+                    <strong class="text-nowrap">{{ apartment.price_parking }}
+                      Kč</strong>
+                  </td>
+                  <td>{{ apartment.status }}</td>
+                  <td>
+                    {% if apartment.url %}
+                      <strong>
+                        <a href="{{ apartment.url }}" target="_blank">Stáhnout PDF</a>
+                      </strong>
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
           </tbody>
         </table>
       </div>
       <p class="small text-end mb-5 mb-lg-6">Všechny ceny jsou uvedeny včetně DPH.</p>
-      
+
       <div class="cta-main rounded-pill rounded-start overflow-hidden mb-5 mb-lg-6 shadow-lg">
         <div class="row align-items-center text-secondary">
           <div class="col-xl bg-primary p-4 p-xl-5 my-xl-n2">
