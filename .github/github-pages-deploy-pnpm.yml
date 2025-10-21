@@ -1,0 +1,109 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+    branches: ['main']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🔄
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM 📦
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js ${{ matrix.node-version }} 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Cache dependencies 🗄️
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - name: Install dependencies ⬇️
+        run: pnpm install --ignore-scripts
+        env:
+          CI: true
+
+      - name: Build project 🔨
+        run: pnpm build
+
+      - name: Inspect build output 🔍
+        run: |
+          ls -lah ./build
+          du -sh ./build
+
+      - name: Upload build artifact 📤
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: ./build
+
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download build artifact 📥
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: ./build
+
+      - name: FTP Deploy 🚀
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: www.rezidencemorava.cz.uvirt131.active24.cz
+          username: ${{ vars.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+
+  github-pages-deploy:
+    if: false # Temporarily disable this job
+    runs-on: ubuntu-latest
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download build artifact 📥
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: ./build
+
+      - name: Setup Pages ⚙️
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact to GitHub Pages 📤
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build'
+
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
