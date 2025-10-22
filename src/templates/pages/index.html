@@ -284,11 +284,14 @@ template: 'index'
               <th scope="col">Patro</th>
                 <th scope="col">Dispozice</th>
                 <th scope="col">Plocha</th>
+                <th scope="col">Terasa</th>
                 <th scope="col">Cena bytu</th>
                 <th scope="col">Cena park. stání<sup class="fw-light">*</sup>
                 </th>
                 <th scope="col">Stav</th>
+                {#
                 <th scope="col">Karta bytu</th>
+                #}
               </tr>
             </thead>
             <tbody>
@@ -307,16 +310,23 @@ template: 'index'
                   <td>{{ apartment.layout }}</td>
                   <td>{{ apartment.area_m2 }}
                     m&sup2;</td>
-                  <!-- <td>{{ apartment.balcony }}</td> -->
                   <td>
-                    <strong class="text-secondary text-nowrap">{{ apartment.price_apartment }}
-                      Kč</strong>
+                    {% if apartment.balcony %}
+                      {{ apartment.balcony }} m&sup2;
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if apartment.price_apartment %}
+                      <strong class="text-primary text-nowrap">{{ apartment.price_apartment }} Kč</strong>
+                    {% endif %}
+                    
                   </td>
                   <td>
                     <strong class="text-nowrap">{{ apartment.price_parking }}
                       Kč</strong>
                   </td>
                   <td>{{ apartment.status }}</td>
+                  {#
                   <td>
                     {% if apartment.url %}
                       <strong>
@@ -324,6 +334,7 @@ template: 'index'
                       </strong>
                     {% endif %}
                   </td>
+                  #}
                 </tr>
               {% endfor %}
           </tbody>
