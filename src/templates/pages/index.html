@@ -286,12 +286,9 @@ template: 'index'
                 <th scope="col">Plocha</th>
                 <th scope="col">Terasa</th>
                 <th scope="col">Cena bytu</th>
-                <th scope="col">Cena park. stání<sup class="fw-light">*</sup>
-                </th>
+                <th scope="col">Cena park. stání<sup class="fw-light">*</sup></th>
                 <th scope="col">Stav</th>
-                {#
                 <th scope="col">Karta bytu</th>
-                #}
               </tr>
             </thead>
             <tbody>
@@ -326,15 +323,13 @@ template: 'index'
                       Kč</strong>
                   </td>
                   <td>{{ apartment.status }}</td>
-                  {#
                   <td>
                     {% if apartment.url %}
                       <strong>
-                        <a href="{{ apartment.url }}" target="_blank">Stáhnout PDF</a>
+                        <a href="./docs/{{ apartment.url }}" target="_blank">Stáhnout PDF</a>
                       </strong>
                     {% endif %}
                   </td>
-                  #}
                 </tr>
               {% endfor %}
           </tbody>
