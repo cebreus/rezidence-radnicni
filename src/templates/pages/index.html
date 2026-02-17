@@ -297,7 +297,7 @@ template: 'index'
                   <td>
                     <strong>
                       {% if apartment.url %}
-                        <a href="{{ apartment.url }}" target="_blank">{{ apartment.apartment_number }}</a>
+                        <a href="./docs/{{ apartment.url }}" target="_blank">{{ apartment.apartment_number }}</a>
                       {% else %}
                         {{ apartment.apartment_number }}
                       {% endif %}
