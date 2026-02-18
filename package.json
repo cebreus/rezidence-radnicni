@@ -132,7 +132,7 @@
     "stylelint-selector-bem-pattern": "^3.0.1"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "lint-staged": {
     "*.{css,scss,md,js,jsx,ts,tsx,json}": [
