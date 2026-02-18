@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Basic Gulp DevStack for basic front-end development with customized Bootstrap.",
   "scripts": {
-    "start": "npm run dev",
+    "start": "pnpm run dev",
     "build": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.build.js default",
     "build:validate:html": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.build.js validate",
     "dev": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.js default",
@@ -11,7 +11,7 @@
     "export": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.export.js default",
     "export:validate:html": "npx gulp -f gulpfile.export.js validate",
     "commit": "npx git-cz",
-    "format": "npx prettier --write **/*.{css,scss,md,js,jsx,ts,tsx,json} && npm run js:fix && npm run css:fix && npm run text:fix",
+    "format": "npx prettier --write **/*.{css,scss,md,js,jsx,ts,tsx,json} && pnpm run js:fix && pnpm run css:fix && pnpm run text:fix",
     "css:lint": "npx stylelint **/*.scss",
     "css:fix": "npx stylelint --fix **/*.scss",
     "js:lint": "npx eslint '**/*.js'",
@@ -22,7 +22,7 @@
     "todo": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.js todo",
     "todo:show": "npx leasot -x -r markdown -A '.txt,coffeeParser' './**/*.{js,html,njk,scss,txt,md,yml}' -i './node_modules/**/*'",
     "pre-commit": "npx lint-staged",
-    "prepare": "rm -rf .husky && npx husky install && npx husky set .husky/pre-commit 'npm run pre-commit' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit'"
+    "prepare": "rm -rf .husky && npx husky install && npx husky set .husky/pre-commit 'pnpm run pre-commit' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit'"
   },
   "repository": {
     "type": "git",
@@ -42,8 +42,6 @@
     "bootstrap"
   ],
   "dependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/eslint-parser": "^7.28.6",
     "autoprefixer": "^10.4.24",
     "bootstrap": "5.3.3",
     "browser-sync": "^2.29.3",
@@ -90,13 +88,13 @@
     "nunjucks-markdown-filter": "^0.1.0",
     "postcss": "^8.5.6",
     "postcss-scss": "^4.0.9",
-    "prettier": "^2.8.8",
     "sass": "^1.97.3",
     "through2": "^4.0.2",
     "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
+    "@babel/core": "^7.29.0",
+    "@babel/eslint-parser": "^7.28.6",
     "@babel/preset-env": "^7.29.0",
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
@@ -115,6 +113,7 @@
     "husky": "^8.0.3",
     "imagemin-svgo": "^11.0.1",
     "lint-staged": "^13.3.0",
+    "prettier": "^2.8.8",
     "release-it": "^15.11.0",
     "remark": "^14.0.3",
     "remark-cli": "^11.0.0",
@@ -142,7 +141,7 @@
       "eslint --fix"
     ],
     "*.md": [
-      "npm run text:fix --"
+      "pnpm run text:fix --"
     ],
     "*.scss": [
       "stylelint --fix --allow-empty-input"

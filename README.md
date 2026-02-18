@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-[Node.js and npm](https://nodejs.org/en/) are required.
+[Node.js](https://nodejs.org/en/) (v22+) and [pnpm](https://pnpm.io/) are required.
 
 ### Installing
 
@@ -18,10 +18,10 @@ These instructions will get you a copy of the project up and running on your loc
     git clone https://github.com/cebreus/gulp-devstack/ ./PROJECT_NAME
     ```
 
-2.  Go to project directory `PROJECT_NAME` and install npm dependencies
+2.  Go to project directory `PROJECT_NAME` and install dependencies
 
     ```bash
-    cd PROJECT_NAME && npm i
+    cd PROJECT_NAME && pnpm install
     ```
 
 ## Usage
@@ -29,19 +29,19 @@ These instructions will get you a copy of the project up and running on your loc
 1.  🛠️ Development enviroment with watchers and hot-reload
 
     ```bash
-    npm run dev
+    pnpm run dev
     ```
 
 2.  👁️ Static build with optimised and formated sources
 
     ```bash
-    npm run export
+    pnpm run export
     ```
 
 3.  💯 Static build ready for production deployment with maximum minification
 
     ```bash
-    npm run build
+    pnpm run build
     ```
 
 ## Authors
