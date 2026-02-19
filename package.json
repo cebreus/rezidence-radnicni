@@ -43,6 +43,7 @@
   ],
   "dependencies": {
     "autoprefixer": "^10.4.24",
+    "basic-ftp": "^5.1.0",
     "bootstrap": "5.3.3",
     "browser-sync": "^2.29.3",
     "cssnano": "^6.1.2",
@@ -89,8 +90,7 @@
     "postcss": "^8.5.6",
     "postcss-scss": "^4.0.9",
     "sass": "^1.97.3",
-    "through2": "^4.0.2",
-    "vinyl-ftp": "^0.6.1"
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

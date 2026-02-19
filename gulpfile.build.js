@@ -52,12 +52,13 @@ function htmlValidate() {
   return htmlValidateFnc(`${config.buildBase}/**/*.html`);
 }
 
-function deployFtp(done) {
-  return deployFtpFnc(`${config.buildBase}/**`, `${config.buildBase}/`, '.', {
-    cb: () => {
-      done();
-    },
-  });
+async function deployFtp() {
+  const remoteDir = process.env.FTP_REMOTE_DIR || '.';
+  return deployFtpFnc(
+    `${config.buildBase}/**`,
+    `${config.buildBase}/`,
+    remoteDir
+  );
 }
 
 // SASS
