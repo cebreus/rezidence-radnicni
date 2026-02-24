@@ -8,6 +8,7 @@
     "build:validate:html": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.build.js validate",
     "dev": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.js default",
     "deploy-ftp": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.build.js deployFtp",
+    "deploy-ftp-only": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.build.js deployFtpOnly",
     "export": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.export.js default",
     "export:validate:html": "npx gulp -f gulpfile.export.js validate",
     "commit": "npx git-cz",

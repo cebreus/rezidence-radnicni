@@ -313,6 +313,7 @@ gulp.task(
 );
 
 gulp.task('deployFtp', gulp.series('build', deployFtp));
+gulp.task('deployFtpOnly', deployFtp);
 
 // Aliases
 

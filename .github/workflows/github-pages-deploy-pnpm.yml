@@ -65,7 +65,7 @@ jobs:
           path: ./build
 
       - name: Deploy via FTP 🚀
-        run: pnpm deploy-ftp
+        run: pnpm deploy-ftp-only
         env:
           FTP_HOST: ${{ vars.FTP_HOST || secrets.FTP_HOST }}
           FTP_USER: ${{ vars.FTP_USER || secrets.FTP_USER }}
