@@ -12,7 +12,7 @@ require('dotenv').config();
  */
 const deployFtp = async (_input, basePath, remoteDir, params = {}) => {
   const client = new ftp.Client();
-  client.ftp.verbose = false;
+  client.ftp.verbose = true;
 
   let currentFile = '';
   client.trackProgress((info) => {
@@ -29,7 +29,11 @@ const deployFtp = async (_input, basePath, remoteDir, params = {}) => {
       host: process.env.FTP_HOST,
       user: process.env.FTP_USER,
       password: process.env.FTP_PASSWORD,
-      secure: false,
+      secure:
+        process.env.FTP_SECURE === 'false'
+          ? false
+          : process.env.FTP_SECURE || true,
+      secureOptions: { rejectUnauthorized: false },
     });
 
     log(`[FTP] Connected to ${process.env.FTP_HOST}`);
